@@ -1,4 +1,11 @@
-<div class="p-6 h-full rounded-xl bg-backgroundGrey">
+<!-- [ngClass]="showSidebar ? 'w-1/6' : 'w-[4rem]'" -->
+<div
+  class="p-6 h-full rounded-xl bg-backgroundGrey w-1/6 transition-all grow border"
+  [ngClass]="showSidebar ? 'w-[20rem]' : 'w-[4rem]'"
+>
   <h1>Menu</h1>
   Sidebar
+  <button class="px-2 py-1 bg-white w-fit" (click)="toggleSidebar()">
+    HERE
+  </button>
 </div>
