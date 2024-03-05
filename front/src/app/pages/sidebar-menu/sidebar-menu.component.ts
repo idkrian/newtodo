@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { MenuOptionComponent } from '../../components/molecules/menu-option/menu-option.component';
 
 @Component({
   selector: 'app-sidebar-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MenuOptionComponent],
   templateUrl: './sidebar-menu.component.html',
 })
 export class SidebarMenuComponent {
