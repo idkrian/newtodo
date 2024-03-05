@@ -1,5 +1,5 @@
 <div
-  class="p-4 rounded-xl bg-backgroundGrey w-1/6 transition-all grow border"
+  class="p-4 rounded-xl bg-backgroundGrey transition-all"
   [ngClass]="showSidebar ? 'w-[20rem] h-full' : 'w-[3.2rem]'"
 >
   <div class="flex justify-between">
@@ -22,8 +22,13 @@
       <app-menu-option
         [icon]="'pi pi-angle-double-right'"
         [label]="'Upcoming'"
+        [navigate]="'/upcoming'"
       />
-      <app-menu-option [icon]="'pi pi-list'" [label]="'Today'" />
+      <app-menu-option
+        [icon]="'pi pi-list'"
+        [label]="'Today'"
+        [navigate]="'/today'"
+      />
       <app-menu-option [icon]="'pi pi-calendar'" [label]="'Calendar'" />
       <app-menu-option [icon]="'pi pi-clone'" [label]="'Sticky Wall'" />
     </div>

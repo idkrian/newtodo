@@ -15,6 +15,5 @@ export class SidebarMenuComponent {
 
   toggleSidebar(): void {
     this.showSidebar = !this.showSidebar;
-    console.log(this.showSidebar);
   }
 }
