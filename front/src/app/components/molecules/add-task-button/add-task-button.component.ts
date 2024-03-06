@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../../../data.service';
 
 @Component({
   selector: 'app-add-task-button',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './add-task-button.component.html',
 })
-export class AddTaskButtonComponent {}
+export class AddTaskButtonComponent {
+  constructor(private dataService: DataService) {}
+
+  toggle() {
+    this.dataService.toggleTaskSidebar();
+  }
+}

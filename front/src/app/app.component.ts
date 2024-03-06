@@ -5,6 +5,7 @@ import { TaskComponent } from './components/molecules/task/task.component';
 import { AddTaskButtonComponent } from './components/molecules/add-task-button/add-task-button.component';
 import { CommonModule } from '@angular/common';
 import { SidebarTaskComponent } from './pages/sidebar-task/sidebar-task.component';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -18,11 +19,6 @@ import { SidebarTaskComponent } from './pages/sidebar-task/sidebar-task.componen
     SidebarTaskComponent,
   ],
   templateUrl: './app.component.html',
+  providers: [DataService],
 })
-export class AppComponent {
-  taskSidebar: boolean = false;
-
-  showTaskSidebar(): void {
-    this.taskSidebar = !this.taskSidebar;
-  }
-}
+export class AppComponent {}
