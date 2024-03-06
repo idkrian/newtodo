@@ -1,8 +1,15 @@
-<div class="flex mb-8">
-  <h1 class="text-5xl font-bold">{{ label }}</h1>
-  <div
-    class="px-4 border-2 border-backgroundGrey rounded-md ml-4 flex items-center"
+<div class="flex mb-8 h-fit">
+  <h1
+    [ngClass]="
+      titleSize == 'small' ? ' text-2xl font-bold' : 'text-5xl font-bold'
+    "
   >
-    <p class="font-semibold text-3xl">5</p>
+    {{ label }}
+  </h1>
+  <div
+    *ngIf="titleSize != 'small'"
+    class="border-2 border-backgroundGrey rounded-md flex items-center px-4 ml-4 font-semibold text-3xl"
+  >
+    <p>5</p>
   </div>
 </div>
