@@ -4,6 +4,7 @@ import { SidebarMenuComponent } from './pages/sidebar-menu/sidebar-menu.componen
 import { TaskComponent } from './components/molecules/task/task.component';
 import { AddTaskButtonComponent } from './components/molecules/add-task-button/add-task-button.component';
 import { CommonModule } from '@angular/common';
+import { SidebarTaskComponent } from './pages/sidebar-task/sidebar-task.component';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +15,14 @@ import { CommonModule } from '@angular/common';
     TaskComponent,
     SidebarMenuComponent,
     CommonModule,
+    SidebarTaskComponent,
   ],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'Rian';
+  taskSidebar: boolean = false;
+
+  showTaskSidebar(): void {
+    this.taskSidebar = !this.taskSidebar;
+  }
 }

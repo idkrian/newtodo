@@ -4,7 +4,7 @@ import { UpcomingComponent } from './pages/upcoming/upcoming.component';
 
 export const routes: Routes = [
   {
-    path: 'today',
+    path: '',
     component: TodayComponent,
     title: 'Today',
   },

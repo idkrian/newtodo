@@ -1,10 +1,25 @@
 <div class="w-full h-full p-6 border-2">
-  <div class="flex">
-    <h1 class="text-3xl font-bold">Upcoming</h1>
-    <div class="px-3 py-1 border-2 border-backgroundGrey rounded-md">
-      <p class="font-semibold">5</p>
+  <app-title [label]="'Upcoming'" />
+  <div class="">
+    <div class="w-full border-2 h-2/5">
+      <app-title [label]="'Today'" />
+      <app-add-task-button />
+      <app-task />
+      <app-task />
+    </div>
+    <div class="flex w-full gap-4 h-2/5">
+      <div class="w-full border-2">
+        <app-title [label]="'Tomorrow'" />
+        <app-add-task-button />
+        <app-task />
+        <app-task />
+      </div>
+      <div class="w-full border-2">
+        <app-title [label]="'This Week'" />
+        <app-add-task-button />
+        <app-task />
+        <app-task />
+      </div>
     </div>
   </div>
-  <app-add-task-button />
-  <app-task />
 </div>

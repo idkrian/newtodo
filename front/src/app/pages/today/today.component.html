@@ -1,10 +1,7 @@
 <div class="w-full h-full p-6 border-2">
-  <div class="flex">
-    <h1 class="text-3xl font-bold">Today</h1>
-    <div class="px-3 py-1 border-2 border-backgroundGrey rounded-md">
-      <p class="font-semibold">5</p>
-    </div>
+  <app-title [label]="'Today'" />
+  <div>
+    <app-add-task-button />
+    <app-task />
   </div>
-  <app-add-task-button />
-  <app-task />
 </div>
