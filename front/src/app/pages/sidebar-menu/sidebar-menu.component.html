@@ -1,5 +1,5 @@
 <div
-  class="p-4 rounded-xl bg-backgroundGrey transition-all"
+  class="p-4 rounded-xl bg-mediumGrey transition-all"
   [ngClass]="showSidebar ? 'w-[20rem] h-full' : 'w-[3.2rem]'"
 >
   <div class="flex justify-between">
@@ -18,7 +18,7 @@
   </div>
   <div class="pl-2 pt-4" [ngClass]="showSidebar ? '' : 'hidden'">
     <p class="text-sm font-bold">TASKS</p>
-    <div>
+    <div class="my-2">
       <app-menu-option
         [icon]="'pi pi-angle-double-right'"
         [label]="'Upcoming'"
@@ -31,6 +31,27 @@
       />
       <app-menu-option [icon]="'pi pi-calendar'" [label]="'Calendar'" />
       <app-menu-option [icon]="'pi pi-clone'" [label]="'Sticky Wall'" />
+    </div>
+  </div>
+
+  <div class="pl-2 pt-4" [ngClass]="showSidebar ? '' : 'hidden'">
+    <p class="text-sm font-bold">LISTS</p>
+    <div class="my-2">
+      <app-menu-option
+        [icon]="'pi pi-angle-double-right'"
+        [label]="'Personal'"
+        [navigate]="'/upcoming'"
+      />
+      <app-menu-option
+        [icon]="'pi pi-list'"
+        [label]="'Personal'"
+        [navigate]="'/'"
+      />
+      <app-menu-option
+        [icon]="'pi pi-list'"
+        [label]="'Work'"
+        [navigate]="'/'"
+      />
     </div>
   </div>
 </div>
