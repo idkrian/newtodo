@@ -1,6 +1,87 @@
 <div
-  [ngClass]="showTaskSidebar() ? 'bg-backgroundGrey w-64 p-4' : 'hidden'"
-  class="h-full transition-all"
+  [ngClass]="!showTaskSidebar() ? 'bg-backgroundGrey w-96 p-4' : 'hidden'"
+  class="h-full transition-all rounded-xl"
 >
-  <h1 class="text-2xl font-bold text-fontBlack">Task:</h1>
+  <div class="flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-fontBlack">Task:</h1>
+    <i
+      class="pi pi-times font-bold cursor-pointer"
+      style="color: #7c7c7c; font-size: 1rem"
+    ></i>
+  </div>
+  <div class="flex flex-col gap-4 my-4">
+    <input
+      type="text"
+      name=""
+      id=""
+      placeholder="Go to the market"
+      class="bg-backgroundGrey w-full p-2 border-2 border-strongGrey rounded-xl font-semibold"
+    />
+    <input
+      type="text"
+      name=""
+      id=""
+      placeholder="Description"
+      class="bg-backgroundGrey w-full p-2 border-2 border-strongGrey rounded-xl font-semibold h-32"
+    />
+    <div class="w-full">
+      <div class="flex justify-between w-3/5 items-center">
+        <p class="font-semibold">List</p>
+        <select
+          name="pets"
+          id="pet-select"
+          class="p-1 bg-backgroundGrey border-2 border-strongGrey rounded-xl"
+        >
+          <option value="dog">Personal</option>
+          <option value="cat">Option 1</option>
+          <option value="cat">Option 2</option>
+          <option value="cat">Option 3</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="w-full">
+      <div class="flex justify-between w-3/5 items-center">
+        <p class="font-semibold">Due Date</p>
+        <select
+          name="pets"
+          id="pet-select"
+          class="p-1 bg-backgroundGrey border-2 border-strongGrey rounded-xl"
+        >
+          <option value="dog">Personal</option>
+          <option value="cat">Option 1</option>
+          <option value="cat">Option 2</option>
+          <option value="cat">Option 3</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full">
+    <div class="flex justify-between w-3/5 items-center">
+      <p class="font-semibold">Tags</p>
+      <p-chip
+        label="Action"
+        [removable]="true"
+        styleClass="bg-yellow rounded-xl"
+      ></p-chip>
+    </div>
+  </div>
+
+  <div>
+    <h1 class="text-2xl font-bold text-fontBlack mt-6">Subtasks:</h1>
+    <app-add-task-button />
+    <app-task />
+  </div>
+
+  <div class="flex justify-between gap-4">
+    <button
+      class="p-3 rounded-xl text-fontBlack font-bold border-2 border-strongGrey w-full"
+    >
+      Delete Task
+    </button>
+    <button class="bg-yellow p-3 rounded-xl text-fontBlack font-bold w-full">
+      Save Changes
+    </button>
+  </div>
 </div>
