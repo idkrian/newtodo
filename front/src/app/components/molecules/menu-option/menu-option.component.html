@@ -4,7 +4,7 @@
     (click)="navigateTo(navigate!)"
   >
     <div class="flex items-center">
-      <i [ngClass]="icon" style="color: #7c7c7c; font-size: 1.2rem"></i>
+      <ng-content></ng-content>
       <p class="pl-2 font-normal group-hover:font-semibold">{{ label }}</p>
     </div>
     <div class="px-2.5 bg-backgroundGrey group-hover:bg-white rounded-md">

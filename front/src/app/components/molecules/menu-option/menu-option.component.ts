@@ -13,7 +13,6 @@ export class MenuOptionComponent {
   navigateTo(page: string) {
     this.router.navigate([page]);
   }
-  @Input() icon: string = '';
   @Input() label: string = '';
   @Input() navigate?: string = '';
 }

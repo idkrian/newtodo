@@ -19,39 +19,69 @@
   <div class="pl-2 pt-4" [ngClass]="showSidebar ? '' : 'hidden'">
     <p class="text-sm font-bold">TASKS</p>
     <div class="my-2">
-      <app-menu-option
-        [icon]="'pi pi-angle-double-right'"
-        [label]="'Upcoming'"
-        [navigate]="'/upcoming'"
-      />
-      <app-menu-option
-        [icon]="'pi pi-list'"
-        [label]="'Today'"
-        [navigate]="'/'"
-      />
-      <app-menu-option [icon]="'pi pi-calendar'" [label]="'Calendar'" />
-      <app-menu-option [icon]="'pi pi-clone'" [label]="'Sticky Wall'" />
+      <app-menu-option [label]="'Upcoming'" [navigate]="'/upcoming'">
+        <i
+          [ngClass]="'pi pi-angle-double-right'"
+          style="color: #7c7c7c; font-size: 1.2rem"
+        ></i>
+      </app-menu-option>
+      <app-menu-option [label]="'Today'" [navigate]="'/'">
+        <i
+          [ngClass]="'pi pi-list'"
+          style="color: #7c7c7c; font-size: 1.2rem"
+        ></i>
+      </app-menu-option>
+      <app-menu-option [label]="'Calendar'">
+        <i
+          [ngClass]="'pi pi-calendar'"
+          style="color: #7c7c7c; font-size: 1.2rem"
+        ></i>
+      </app-menu-option>
+      <app-menu-option [label]="'Sticky Wall'">
+        <i
+          [ngClass]="'pi pi-clone'"
+          style="color: #7c7c7c; font-size: 1.2rem"
+        ></i>
+      </app-menu-option>
     </div>
   </div>
 
   <div class="pl-2 pt-4" [ngClass]="showSidebar ? '' : 'hidden'">
     <p class="text-sm font-bold">LISTS</p>
     <div class="my-2">
-      <app-menu-option
-        [icon]="'pi pi-angle-double-right'"
-        [label]="'Personal'"
-        [navigate]="'/upcoming'"
-      />
-      <app-menu-option
-        [icon]="'pi pi-list'"
-        [label]="'Personal'"
-        [navigate]="'/'"
-      />
-      <app-menu-option
-        [icon]="'pi pi-list'"
-        [label]="'Work'"
-        [navigate]="'/'"
-      />
+      <app-menu-option [label]="'Personal'" [navigate]="'/upcoming'">
+        <div class="p-2 bg-yellow rounded-md"></div>
+      </app-menu-option>
+      <app-menu-option [label]="'Personal'" [navigate]="'/'">
+        <div class="p-2 bg-yellow rounded-md"></div>
+      </app-menu-option>
+      <app-menu-option [label]="'Work'" [navigate]="'/'">
+        <div class="p-2 bg-yellow rounded-md"></div>
+      </app-menu-option>
+      <button
+        class="flex justify-start py-3 px-4 rounded-xl w-full align-middle items-center"
+      >
+        <i
+          class="pi pi-plus font-bold"
+          style="color: #7c7c7c; font-size: 1rem"
+        ></i>
+        <p class="ml-2">Add New List</p>
+      </button>
+    </div>
+  </div>
+
+  <div class="pl-2 pt-4" [ngClass]="showSidebar ? '' : 'hidden'">
+    <p class="text-sm font-bold">TAGS</p>
+    <div class="my-2 flex gap-2">
+      <div class="bg-yellow rounded-md py-2 px-4">Tag 1</div>
+      <div class="bg-yellow rounded-md py-2 px-4">Tag 2</div>
+      <div class="flex items-center rounded-md bg-yellow py-2 px-4 gap-1">
+        <i
+          class="pi pi-plus font-bold"
+          style="color: #7c7c7c; font-size: 1rem"
+        ></i>
+        <p>Add Tag</p>
+      </div>
     </div>
   </div>
 </div>
